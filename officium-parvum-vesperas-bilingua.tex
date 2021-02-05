@@ -1,0 +1,643 @@
+\documentclass[14pt,a5paper]{extbook}
+\usepackage{liturg}
+\usepackage{multicol}
+\usepackage[utf8]{inputenc}
+\usepackage[T2A,T1]{fontenc}
+\usepackage{polyglossia}
+\usepackage[cm]{fullpage}
+\usepackage{multicol}
+\usepackage{graphicx}
+\usepackage{geometry}
+\usepackage{fontspec}
+\usepackage{microtype}
+\usepackage{titlesec}
+\usepackage[object=vectorian]{pgfornament}
+\usetikzlibrary{shapes.geometric,calc}
+\usepackage{graphicx}
+\graphicspath{ {./} }
+\usepackage{ragged2e}
+\usepackage{pgfornament}
+\usepackage{indentfirst}
+\usepackage{tocloft}
+\usepackage[compact]{titlesec}
+\usepackage{hyphenat}
+\usepackage{needspace}
+\usepackage[breakall]{truncate}
+\usepackage{parallel}
+
+\setmainlanguage{latin} 
+\setotherlanguage{russian}
+
+\usepackage{librebaskerville}
+
+\newfontfamily\russianfont[Script=Cyrillic]{Times New Roman}
+
+% \newfontfamily\russianfont[Script=Cyrillic]{Libre Baskerville}
+
+
+%\setmainfont{Sequentia.ttf}[]
+
+\geometry{
+ left=15mm,
+ top=15mm,
+ right=15mm,
+ bottom=15mm
+ }
+ 
+\setlength{\parindent}{3mm}
+\setlength{\parskip}{0pt}
+\renewcommand{\baselinestretch}{1.0}
+ 
+\newcommand{\officiumtitle}[1]{\parbox{\linewidth}{\centering\textit{#1}}}
+ 
+\input Zallman.fd
+\newcommand*\initfamily{\usefont{U}{Zallman}{xl}{n}}
+ 
+ \def\drop #1#2 {
+    % \Needspace{4\baselineskip}
+    \setlength{\linewidth}{\hsize}
+     \lettrine[lines=3,loversize=0.1, lraise=0.0]{\textcolor{black}{\initfamily #1}}{\uppercase{#2}} % a trailing space
+}
+
+\makeatletter
+\DeclareRobustCommand{\V}{\textbf{\vers@resp{-0.1em}{V}}.\,}
+\DeclareRobustCommand{\R}{\textbf{\vers@resp{0pt}{R}}.\,}
+
+\newcommand{\vers@resp@sym}{\raisebox{0.2ex}{\rotatebox[origin=c]{-20}{$\m@th\rceil$}}}
+
+\newcommand{\vers@resp}[2]{%
+  {\ooalign{\hidewidth\kern#1\vers@resp@sym\hidewidth\cr#2\cr}}%
+}
+\makeatother
+\begin{document}
+
+\pagenumbering{gobble}
+
+\begin{sloppy}
+
+
+
+\begin{center}
+\vspace*{25mm}
+
+\Large{\textbf{OFFICIUM PARVUM}}
+
+\large{\textbf{BEATAE MARIAE VIRGINIS}}
+
+\vspace{5mm}
+
+\small{juxta ritum S.O.P.}
+
+\vspace{20mm}
+
+AD VESPERAS
+
+\vspace{15mm}
+
+% \small{\textit{Cum interpretatione russica}}
+
+\textit{\textrussian{С русским переводом}}
+
+\vspace{35mm}
+
+\small{\textit{Ad experimentum}}
+
+\vspace{10mm}
+
+\small{Charcovia}
+
+\vspace{3mm}
+
+\small{MMXX}
+\end{center}
+
+\pagebreak
+
+\begin{Parallel}{0.6\textwidth}{0.35\textwidth}
+    \ParallelLText{\drop Ave María, grátia plena, Dóminus te\-cum. 
+    \R Be\-ne\-dícta tu in mu\-li\-é\-ri\-bus, et benedíctus fructus ventris tui Jesus.}
+    \ParallelRText{\small\textrussian{\V Радуйся, Мария, благодати полная, Господь с Тобою. \R Бла\-го\-сло\-вен\-на Ты между женами,
+и благословен плод чрева Твоего Иисус.}}
+    \ParallelPar
+    \ParallelLText{\V Deus, in adjutórium me\-um inténde. \R Dómine, ad adjuvándum me festína.}
+    \ParallelRText{\small\textrussian{\V Поспеши, Боже, избавить меня. \R По\-спе\-ши, Господи, на помощь мне.} }
+    
+    \ParallelPar
+    \ParallelLText{\V Glória Patri, et Fílio, et Spirítui Sancto. \R Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen. Allelúia. \textit{A Septuagesima ad Pascha:} Laus tibi, Dómine, Rex ætérnæ glóriæ.}
+    \ParallelRText{\small\textrussian{\V Слава Отцу, и Сыну, и Святому Духу.
+\R Как было в начале, и ныне, и присно, и во веки веков. Аминь. Аллилуя. \textit{От Семидесятницы до Пасхи:} Слава тебе, Господи, Царю вечной славы.} }
+    
+    \ParallelPar
+    \ParallelLText{\drop
+Dixit Dóminus Dómino meo: * Sede a dextris meis:}
+    \ParallelRText{\small\textrussian{Сказал Господь Господу моему: * воссядь одесную Меня.} }
+    
+    \ParallelPar
+    \ParallelLText{Donec ponam inimícos tuos, * scabéllum pedum tuórum.}
+    \ParallelRText{\small\textrussian{Доколе положу врагов Твоих * в подножие ног Твоих.} }
+    
+    \ParallelPar
+    \ParallelLText{Virgam virtútis tuæ emíttet Dóminus ex Sion: * domináre in médio inimicórum tuórum.}
+    \ParallelRText{\small\textrussian{Жезл силы Твоей пошлёт Господь с Сиона: * господствуй среди врагов Твоих.} }
+    
+    \ParallelPar
+    \ParallelLText{Tecum princípium in die virtútis tuæ in splendóribus sanctórum: * ex útero ante lucíferum génui te.}
+    \ParallelRText{\small\textrussian{В день силы Твоей народ Твой готов во благолепии святыни; * из чрева, прежде утренней зари, Я родил Тебя.} }
+    
+    \ParallelPar
+    \ParallelLText{Jurávit Dóminus, et non poenitébit eum: * Tu es sacérdos in ætérnum secúndum órdinem Melchísedech.}
+    \ParallelRText{\small\textrussian{Клялся Господь и не раскается: * Ты священник вовек по чину Мелхиседека.} }
+    
+    \ParallelPar
+    \ParallelLText{Dóminus a dextris tuis, * confrégit in die iræ suæ reges.}
+    \ParallelRText{\small\textrussian{Господь одесную Тебя. * поразит в день гнева своего царей.} }
+    
+    \ParallelPar
+    \ParallelLText{Judicábit in natiónibus, implébit ruínas: * conquassábit cápita in terra multórum.}
+    \ParallelRText{\small\textrussian{Совершит суд над народами, наполнит землю трупами, * сокрушит головы в земле обширной.} }
+    
+    \ParallelPar
+    \ParallelLText{De torrénte in via bibet: * proptérea exaltábit caput.}
+    \ParallelRText{\small\textrussian{Из потока на пути будет пить, * потому вознесёт главу.} }
+    
+    \ParallelPar
+    \ParallelLText{Glória Patri, et Fílio, et Spirítui Sancto. }
+    \ParallelRText{\small\textrussian{Слава Отцу, и Сыну, и Святому Духу.} }
+    
+    \ParallelPar
+    \ParallelLText{Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.}
+    \ParallelRText{\small\textrussian{Как было в начале, и ныне, и присно, и во веки веков. Аминь.} }
+    
+    
+    \ParallelPar
+    \ParallelLText{\drop
+Laudáte, púeri, Dóminum: * laudáte nomen Dómini.}
+    \ParallelRText{\small\textrussian{Хвалите, рабы Господни, * хвалите имя Господне.} }
+    
+    \ParallelPar
+    \ParallelLText{Sit nomen Dómini benedíctum, * ex hoc nunc, et usque in sǽculum.}
+    \ParallelRText{\small\textrussian{Да будет имя Господне благословенно * отныне и вовек.} }
+    
+    \ParallelPar
+    \ParallelLText{A solis ortu usque ad occásum, * laudábile nomen Dómini.}
+    \ParallelRText{\small\textrussian{От восхода солнца до запада * да будет прославляемо имя Господне.} }
+    
+    \ParallelPar
+    \ParallelLText{Excélsus super omnes gentes Dóminus, * et super cælos glória ejus.}
+    \ParallelRText{\small\textrussian{Высок над всеми народами Господь; * превыше небес слава Его.} }
+    
+    \ParallelPar
+    \ParallelLText{Quis sicut Dóminus, Deus noster, qui in altis hábitat, * et humília réspicit in cælo et in terra?}
+    \ParallelRText{\small\textrussian{Кто, как Господь, Бог наш, Который, обитая на высоте, * приклоняется, чтобы призирать на небо и на землю?} }
+    
+    \ParallelPar
+    \ParallelLText{Súscitans a terra ínopem, * et de stércore érigens páuperem:}
+    \ParallelRText{\small\textrussian{Из праха поднимает бедного, * из грязи возвышает нищего,} }
+    
+    \ParallelPar
+    \ParallelLText{Ut cóllocet eum cum prin\-cí\-pi\-bus, * cum princípibus pópuli sui.}
+    \ParallelRText{\small\textrussian{Чтобы посадить его с князьями, * с князьями народа его;} }
+    
+    \ParallelPar
+    \ParallelLText{Qui habitáre facit stérilem in domo, * matrem filiórum lætántem.}
+    \ParallelRText{\small\textrussian{Бесплодную вселяет в дом матерью, * радующеюся о детях.} }
+    
+    \ParallelPar
+    \ParallelLText{Glória Patri. Sicut erat.}
+    \ParallelRText{\small\textrussian{Слава, и ныне.} }
+    
+    \ParallelPar
+    \ParallelLText{\drop
+Lætátus sum in his, quæ dicta sunt mihi: * In domum Dómini íbimus.}
+    \ParallelRText{\small\textrussian{Возрадовался я, когда сказали мне: * "пойдём в дом Господень".} }
+    
+    \ParallelPar
+    \ParallelLText{Stantes erant pedes nostri, * in átriis tuis, Jerúsalem.}
+    \ParallelRText{\small\textrussian{Вот, стоят ноги наши * во вратах твоих, Иерусалим,} }
+    
+    \ParallelPar
+    \ParallelLText{Jerúsalem, quæ ædificátur ut cívitas: * cujus participátio ejus in idípsum.}
+    \ParallelRText{\small\textrussian{Иерусалим, устроенный * как город, слитый в одно,} }
+    
+    \ParallelPar
+    \ParallelLText{Illuc enim ascendérunt tribus, tribus Dómini: * testimónium Israël ad confiténdum nómini Dómini.}
+    \ParallelRText{\small\textrussian{Куда восходят колена, колена Господни, * по закону Израилеву, славить имя Господне.} }
+    
+    \ParallelPar
+    \ParallelLText{Quia illic sedérunt sedes in judício, * sedes super domum David.}
+    \ParallelRText{\small\textrussian{Там стоят престолы суда, * престолы дома Давидова.} }
+    
+    \ParallelPar
+    \ParallelLText{Rogáte quæ ad pacem sunt Jerúsalem: * et abundántia diligéntibus te:}
+    \ParallelRText{\small\textrussian{Просите мира Иерусалиму: * да благоденствуют любящие тебя.} }
+    
+    \ParallelPar
+    \ParallelLText{Fiat pax in virtúte tua: * et abundántia in túrribus tuis.}
+    \ParallelRText{\small\textrussian{Да будет мир в стенах твоих, * благоденствие - в чертогах твоих.} }
+    
+    \ParallelPar
+    \ParallelLText{Propter fratres meos, et próximos meos, * loquébar pacem de te:}
+    \ParallelRText{\small\textrussian{Ради братьев моих и ближних моих * говорю я: "мир тебе"} }
+    
+    \ParallelPar
+    \ParallelLText{Propter domum Dómini, Dei nostri, * quæsívi bona tibi.}
+    \ParallelRText{\small\textrussian{Ради дома Господа, Бога нашего, * желаю блага тебе.} }
+    
+    \ParallelPar
+    \ParallelLText{Glória Patri. Sicut erat.}
+    \ParallelRText{\small\textrussian{Слава, и ныне.} }
+    
+    \ParallelPar
+    \ParallelLText{\drop
+Nisi Dóminus ædificáverit domum, * in vanum laboravérunt qui ædíficant eam.}
+    \ParallelRText{\small\textrussian{Если Господь не созиждет дома, * напрасно трудятся строящие его;} }
+    
+    \ParallelPar
+    \ParallelLText{Nisi Dóminus custodíerit civitátem, * frustra vígilat qui custódit eam.}
+    \ParallelRText{\small\textrussian{Если Господь не охранит города, * напрасно бодрствует страж.} }
+    
+    \ParallelPar
+    \ParallelLText{Vanum est vobis ante lucem súrgere: * súrgite postquam sedéritis, qui manducátis panem dolóris.}
+    \ParallelRText{\small\textrussian{Напрасно вы рано встаёте, * поздно ложитесь, едите хлеб печали.} }
+    
+    \ParallelPar
+    \ParallelLText{Cum déderit diléctis suis somnum: * ecce heréditas Dómini fílii: merces, fructus ventris.}
+    \ParallelRText{\small\textrussian{Тогда как возлюбленного Своего Он одаривает и во сне. * Вот наследие от Господа: дети; награда от Него - плод чрева.} }
+    
+    \ParallelPar
+    \ParallelLText{Sicut sagíttæ in manu poténtis: * ita fílii excussórum.}
+    \ParallelRText{\small\textrussian{Что стрелы в руке сильного, * то сыновья молодости.} }
+    
+    \ParallelPar
+    \ParallelLText{Beátus vir, qui implévit desidérium suum ex ipsis: * non confundétur cum loquétur inimícis suis in porta.}
+    \ParallelRText{\small\textrussian{Блажен человек, который наполнил ими колчан свой * Не останется он в стыде, когда будет спорить с врагами в воротах.} }
+    
+    \ParallelPar
+    \ParallelLText{Glória Patri. Sicut erat.}
+    \ParallelRText{\small\textrussian{Слава, и ныне.} }
+    
+    \ParallelPar
+    \ParallelLText{\drop
+Lauda, Jerúsalem, Dóminum: * lauda De\-um tuum, Sion.}
+    \ParallelRText{\small\textrussian{Хвали, Иерусалим, Господа; *
+хвали, Сион, Бога твоего,} }
+    
+    \ParallelPar
+    \ParallelLText{Quóniam confortávit seras portárum tuárum: * benedíxit fíliis tuis in te.}
+    \ParallelRText{\small\textrussian{Ибо Он укрепляет засовы ворот твоих, * благословляет сынов твоих среди тебя;} }
+    
+    \ParallelPar
+    \ParallelLText{Qui pósuit fines tuos pacem: * et ádipe fruménti sátiat te.}
+    \ParallelRText{\small\textrussian{Утверждает в пределах твоих мир; * отборной пшеницей насыщает тебя.} }
+    
+    \ParallelPar
+    \ParallelLText{Qui emíttit elóquium suum terræ: * velóciter currit sermo ejus.}
+    \ParallelRText{\small\textrussian{Посылает слово Своё на землю; * быстро течёт слово Его.} }
+    
+    \ParallelPar
+    \ParallelLText{Qui dat nivem sicut lanam: * nébulam sicut cínerem spargit.}
+    \ParallelRText{\small\textrussian{Разбрасывает снег, как шерсть; * сыплет иней, как пепел;} }
+    
+    \ParallelPar
+    \ParallelLText{Mittit crystállum suam sicut buccéllas: * ante fáciem frígoris ejus quis sustinébit?}
+    \ParallelRText{\small\textrussian{Бросает град Свой кусками; * перед морозом Его кто устоит?} }
+    
+    \ParallelPar
+    \ParallelLText{Emíttet verbum suum, et liquefáciet ea: * flabit spíritus ejus, et fluent aquæ.}
+    \ParallelRText{\small\textrussian{Пошлёт слово Своё, и всё растает; * подует ветром Своим, и потекут воды.} }
+    
+    \ParallelPar
+    \ParallelLText{Qui annúntiat verbum su\-um Jacob: * justítias, et judícia sua Israël.}
+    \ParallelRText{\small\textrussian{Он возвестил слово Своё Иакову, * уставы Свои и суды Свои Израилю.} }
+    
+    \ParallelPar
+    \ParallelLText{Non fecit táliter omni natióni: * et judícia sua non manifestávit eis.}
+    \ParallelRText{\small\textrussian{Не сделал Он того никакому другому народу, * и судов Его они не знают.} }
+    
+    \ParallelPar
+    \ParallelLText{Glória Patri. Sicut erat.}
+    \ParallelRText{\small\textrussian{Слава, и ныне.} }
+    
+    \ParallelPar
+    
+    \vspace{3mm}
+    \ParallelLText{\textbf{Ant.} Sancta Dei Génetrix, Virgo semper Mária, intercéde pro nobis ad Dóminum Deum nostrum. }
+    \ParallelRText{\small\textrussian{Святая Богородица, Приснодева Мария, молись о нас Господу Богу нашему.} }
+    
+    \ParallelPar
+    
+    \vspace{3mm}
+    
+    \ParallelLText{\drop
+Sicut cinnamómum et bálsamum aromatízans odórem dedi: quasi myrrha elécta dedi suavitátem odóris. \R Deo grátias.}
+    \ParallelRText{\small\textrussian{}\textrussian{Как корица и аспалаф, я издала ароматный запах и, как отборная смирна, издала сладость благоухания. \R Благодарение Богу}}
+    
+    \ParallelPar
+    
+    \vspace{3mm}
+    
+    \ParallelLText{\drop
+Ave maris stella,
+
+\hspace{18mm}Dei Mater alma,
+
+\hspace{18mm}Atque semper Virgo,
+
+Felix cæli porta.}
+    \ParallelRText{\small\textrussian{Здравствуй, свет над морем,\\
+Божия Невеста,\\
+чистая во веки,\\
+Благость врат небесных}}
+    
+    \ParallelPar
+    \ParallelLText{\vspace{2mm}
+
+Sumens illud Ave
+
+Gabriélis ore,
+
+Funda nos in pace,
+
+Mutans Hevæ nomen.}
+    \ParallelRText{\small\textrussian{Слову Гавриила\\
+Ты внимала, Дева,\\
+Матерью покоя\\
+Будь нам вместо Евы.}}
+    
+    \ParallelPar
+    \ParallelLText{\vspace{2mm}
+
+Solve vincla reis,
+
+Profer lumen cæcis,
+
+Mala nostra pelle,
+
+Bona cuncta posce.}
+    \ParallelRText{\small\textrussian{Возврати ослепшим,\\
+Солнце, что им снилось.\\
+Да отступят беды,\\
+Да явится милость}}
+    
+    \ParallelPar
+    \ParallelLText{\vspace{2mm}
+
+Monstra te esse matrem,
+
+Sumat per te preces,
+
+Qui pro nobis natus,
+
+Tulit esse tuus.}
+    \ParallelRText{\small\textrussian{Сжалься, Матерь наша\\
+Сердце тронь мольбами\\
+Сыну, что однажды\\
+Пожелал быть с нами.} }
+    
+    \ParallelPar
+    \ParallelLText{\vspace{2mm}
+
+Virgo singuláris,
+
+Inter omnes mitis,
+
+Nos culpis solútos
+
+Mites fac et castos.}
+    \ParallelRText{\small\textrussian{О, во славе Дева,\\
+Кротости зерцало,\\
+Дай смиренье сердцу,\\
+Чтоб свободным стало} }
+    
+    \ParallelPar
+    \ParallelLText{\vspace{2mm}
+
+Vitam præsta puram,
+
+Iter para tutum,
+
+Ut vidéntes Iesum,
+
+Semper collætémur.}
+    \ParallelRText{\small\textrussian{Расстели пред нами\\
+Путь прямой и честный,\\
+Дай узреть Иисуса,\\
+Чтобы с ним воскреснуть} }
+    
+    \ParallelPar
+    \ParallelLText{\vspace{2mm}
+
+Sit laus Deo Patri,
+
+Summo Christo decus,
+
+Spirítui Sancto,
+
+Tribus honor unus. Amen.}
+    \ParallelRText{\small\textrussian{Славься, Боже\\ Отче,\\
+Воспоём и Сыну.\\
+Им обоим с Духом\\
+В небе честь едина. Аминь.} }
+    
+    \vspace{2mm}
+    
+    \ParallelPar
+    \ParallelLText{\V Ora pro nobis, sancta Dei Génetrix. \R Ut digni efficiámur promissiónibus Christi.}
+    \ParallelRText{\small\textrussian{\V Молись о нас, Пресвятая Бо\-го\-ро\-ди\-ца \R Что\-бы мы удостоились исполнения Христовых обещаний.} }
+    
+    \ParallelPar
+    \ParallelLText{\drop
+Magníficat * ánima mea Dóminum.}
+    \ParallelRText{\small\textrussian{Величит * душа Моя Господа;} }
+    
+    \ParallelPar
+    \ParallelLText{\hspace{18mm} Et exsultávit spíritus meus: * in Deo, salutári meo.}
+    \ParallelRText{\small\textrussian{И возрадовался дух Мой о Боге, Спасителе Моём,} }
+    
+    \ParallelPar
+    \ParallelLText{Quia respéxit humilitátem ancíllæ suæ: * ecce enim ex hoc beátam me dicent omnes generatiónes.}
+    \ParallelRText{\small\textrussian{Ибо призрел Он на малость Рабы Своей: * отныне блаженной назовут Меня все роды;} }
+    
+    \ParallelPar
+    \ParallelLText{Quia fecit mihi magna, qui potens est: * et sanctum nomen eius.}
+    \ParallelRText{\small\textrussian{Ибо сотворил Мне великое Сильный; *
+и свято имя Его;} }
+    
+    \ParallelPar
+    \ParallelLText{Et misericórdia eius, a progénie in progénies: * timéntibus eum.}
+    \ParallelRText{\small\textrussian{И милость Его из рода в род * к боящимся Его.} }
+    
+    \ParallelPar
+    \ParallelLText{Fecit poténtiam in brácchio suo: * dispérsit supérbos mente cordis sui.}
+    \ParallelRText{\small\textrussian{Явил Он силу руки Своей; * рассеял надменных в помыслах сердец их;} }
+    
+    \ParallelPar
+    \ParallelLText{Depósuit poténtes de sede: * et exaltávit húmiles.}
+    \ParallelRText{\small\textrussian{Низложил сильных с престолов, * и вознёс малых;} }
+    
+    \ParallelPar
+    \ParallelLText{Esuriéntes implévit bonis: * et dívites dimísit inánes.}
+    \ParallelRText{\small\textrussian{Алчущих насытил благ, * и богатых отослал ни с чем.} }
+    
+    \ParallelPar
+    \ParallelLText{Suscépit Israël púerum su\-um: * recordátus misericórdiæ suæ.}
+    \ParallelRText{\small\textrussian{Воспринял Израиля, отрока Своего, * помня о милости Своей,} }
+    
+    \ParallelPar
+    \ParallelLText{Sicut locútus est ad patres nostros: * Ábraham, et sémini eius in sǽcula.}
+    \ParallelRText{\small\textrussian{Как обещал отцам нашим, * Аврааму и потомству его навеки.} }
+    
+    \ParallelPar
+    \ParallelLText{Glória Patri, et Fílio, et Spirítui Sancto. }
+    \ParallelRText{\small\textrussian{Слава Отцу, и Сыну, и Святому Духу.} }
+    
+    \ParallelPar
+    \ParallelLText{Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.}
+    \ParallelRText{\small\textrussian{Как было в начале, и ныне, и присно, и во веки веков. Аминь.} }
+    
+    \ParallelPar
+    
+    \vspace{5mm}
+    \ParallelLText{\textbf{Ant.} Sancta María, succúrre míseris, juva pusillánimes, réfove flébiles, ora pro pópulo, intervéni pro clero, intercéde pro devóto femíneo sexu.}
+    \ParallelRText{\small\textrussian{Святая Мария, помоги несчастным, поддержи малодушных, укрепи боящихся, проси за народ, молись за клир, заступайся за набожных жен.}}
+    
+    \ParallelPar
+    
+    \vspace{3mm}
+    \ParallelLText{\V Dómine, exáudi oratiónem meam.
+\R Et clamor meus ad te véniat.}
+    \ParallelRText{\small\textrussian{\V Услышь, Господи, молитву мою. \R И вопль мой к тебе да приидет. } }
+    
+    \ParallelPar
+    
+    \pagebreak
+    \ParallelLText{Orémus.}
+    \ParallelRText{\small\textrussian{Помолимся.} }
+    \ParallelPar
+    
+    \vspace{3mm}
+    \ParallelLText{\drop Concéde nos fámulos tuos, quǽsumus, Dómine Deus, perpétua mentis et córporis salúte gaudére: et gloriósa beátæ Maríæ semper Vírginis intercessióne a præsénti liberári tristítia, et ætérna pérfrui lætítia. Per Dóminum nostrum Jesum Christum Fílium tuum, qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. \hfill \R Amen.}
+    \ParallelRText{\small\textrussian{Просим тебя, Господи, позволь нам, твоим слугам, радоваться неустанному здоровью души и тела, и по славному заступничеству Приснодевы Марии освободи нас от нынешних печалей, и удостой вечной радости. Через Господа нашего Иисуса Христа, Твоего Сына, который с Тобой живет и царствует в единстве Святого Духа, Бог, во веки веков. Аминь.} }
+    
+    \ParallelPar
+    \ParallelLText{\V Dómine, exáudi oratiónem meam.
+\R Et clamor meus ad te véniat.}
+    \ParallelRText{\small\textrussian{\V Услышь, Господи, молитву мою. \R И вопль мой к тебе да приидет. } }
+    
+    \ParallelPar
+    \ParallelLText{\V Benedicámus Dómino.
+\R Deo grátias.}
+    \ParallelRText{\small\textrussian{\V Благословим Господа \R Благодарение Богу} }
+    
+    \ParallelPar
+    \ParallelLText{\V Ave María, grátia plena, Dóminus tecum. 
+\R Be\-ne\-díc\-ta tu in muliéribus, et benedíctus fructus ventris tui Jesus.}
+    \ParallelRText{\small\textrussian{\V Радуйся, Мария, благодати полная, Господь с Тобою. \R Бла\-го\-сло\-вен\-на Ты между женами, и благословен плод чрева Твоего Иисус.} }
+    
+    \ParallelPar
+    \ParallelLText{\V Fidélium ánimæ per misericórdiam Dei requiéscant in pace.
+\R Amen.
+}
+    \ParallelRText{\small\textrussian{\V Души верных по милосердию Божию да упокоятся в мире. \R Аминь.} }
+    
+    \ParallelPar
+    
+    \vspace{3mm}
+    
+    \hline
+    
+    \vspace{3mm}
+    
+    \ParallelPar
+    \ParallelLText{\textit{Per Adventum:}}
+    \ParallelRText{\small\textrussian{\textit{В Адвент:}} }
+    
+    \ParallelPar
+    
+    \ParallelLText{\textbf{Ad Magnificat Ant.} O Virgo vír\-gi\-num, quómodo fiet istud? Quia nec primam símilem visa es, nec habére sequéntem. Fíliæ Jerúsalem, quid me admirámini? Divínum est mystérium hoc quid cérnitis.}
+    \ParallelRText{\small\textrussian{О Дева над девами, как это станется? Ибо ни перед тобой ни после не видели тебе подобной. Дочери Иерусалимские, что дивитесь мне? Божественной есть тайной то, чему удивляетесь.} }
+    
+    \ParallelPar
+    \ParallelLText{\textbf{Oratio.} Deus, qui de beátæ Máriæ Vírginis útero Verbum tuum Angelo nuntiánte carne suscípere voluísti, præsta supplícibus tuis: ut, qui vere eam Genetrícem Dei crédimus, ejus apud te intercessiónibus adjuvémur. Per eúndem Dóminum nostrum Jesum Christum Fílium tuum, qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæ\-cu\-ló\-rum. }
+    \ParallelRText{\small\textrussian{Боже, который восхотел, чтобы Слово Твоё по благовествованию ангельскому из чрева блаженной Девы Марии, воплотилось, покорно просим Тебя: чтобы мы, которые истинно Богородицу исповедуем, по ёё заступничеству получили помощь. Через того же Иисуса Христа, твоего Сына, который с Тобой живет и царствует в единстве Святого Духа, Бог, во веки веков. Аминь.} }
+    
+    \ParallelPar
+    
+    \vspace{3mm}
+    \ParallelLText{\textit{Tempus Nativitatis:}}
+    \ParallelRText{\small\textrussian{\textit{Рождеств. время:}} }
+    
+    \ParallelPar
+    \ParallelLText{\textbf{Ad Magnificat Ant.} O ad\-mi\-rá\-bi\-le com\-mér\-ci\-um! Cre\-á\-tor gé\-ne\-ris humáni, animátum corpus sumens, de Vírgine nasci dignátus est: et procédens homo sine sémine, lárgitus est nobis suam Deitátem.}
+    \ParallelRText{\small\textrussian{О, чудесный обмен! Создатель рода людского, одушевленное тело приняв, из Девы родился, без семени произойдя человеком, одарил нас своей Божественностью.} }
+    
+    \ParallelPar
+    \ParallelLText{\textbf{Oratio.}  Deus, qui salútis ætérnæ, beátæ Máriæ virginitáte fecúnda, hu\-má\-no géneri prǽmia præstitísti: tríbue, quǽsumus, ut ipsam pro nobis intercédere sentiámus, per quam merúimus Auctórem vitæ suscípere: Dóminum nostrum Jesum Christum Fílium tu\-um, qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum. }
+    \ParallelRText{\small\textrussian{Боже, ты через плодотворное девство благословенной Марии дал человеческому роду награду вечной жизни; просим Тебя: чтобы мы всегда чувствовали заступничество той, через которую удостоились принять Автора нашей жизни, Господа нашего Иисуса Христа, твоего Сына. Который с тобой живет и царствует в единстве Святого Духа, Бог во веки веков. Аминь.} }
+    
+    \ParallelPar
+    
+    \vspace{3mm}
+    \ParallelLText{\textit{Tempore paschali:}}
+    \ParallelRText{\small\textrussian{\textit{Пасхальное время:}} }
+    
+    \ParallelPar
+    \ParallelLText{\textbf{Ad Magnificat Ant.} Regína cæli, lætáre, allelúja: quia quem meruísti portáre, allelúja, resurréxit \textit{(Tempore Ascensionis:} jam ascéndit\textit{)}, sicut dixit, allelúja. Ora pro nobis Deum, allelúja.}
+    \ParallelRText{\small\textrussian{Царица Небесная, радуйся. Аллилуйя. Ибо Тот, Кого Ты удостоилась носить во чреве Твоём. Аллилуйя. Воскрес из мёртвых (\textit{по Вознесении:} Вознесся на небо) по предсказанию Своему. Аллилуйя. Моли Бога о нас. Аллилуйя.} }
+    
+\end{Parallel}
+
+\vfill
+
+\begin{small}
+
+\officiumtitle{Fontes}
+
+1. Libellus Precum ad usum fratrum O.P., Romæ, 1952
+
+2. divinumofficium.com
+
+3. brroman.github.io
+
+4. liturgia-horarum.ru
+
+5. Little Office of the BVM, ed. Soc. of the Most Holy Rosary.
+
+\end{small}
+
+\pagebreak
+
+\begin{russian}
+\begin{small}
+
+\textbf{Введение.} Перед вами - Вечерня из Малого Оффиция Пресвятой Девы Марии согласно обряду Ордена Проповедников. Это удивительная небольшая молитва построена по подобию "большого" Бревиария. Она зародилась в эпоху Высокого Средневековья у особенно почитающих Деву Марию орденов - Доминиканского, Цистерцианского, Картузианского, как дополнение к соответствующим Каноническим Часам.  
+% Для представленной доминиканской версии Малого Оффиция характерна простота и консерватизм, заключающийся в сохранении некоторых старинных особенностей Оффиция (использование Антифонов, и тп). 
+Используются классические варианты текстов, для которых есть множество музыкальных оформлений.
+
+\textbf{Инструкции.} Вечерню или её части можно совершать индивидуально или совместно, желательно во второй половине дня.
+По желанию, можно адаптировать некоторые из приведенных обычаев Ордена Проповедников. 
+Известно, что для доминиканского обряда характерен \textit{глубокий поклон} (можно рукой достать земли; руки скрещены, придерживая скапулярий). Также бывает поклон \textit{малый} (только головой), \textit{средний} (головой и плечами), \textit{Ad Genua} (руки скрещены, ими можно достать до колен).
+\textit{Малый} поклон совершается всегда, когда звучит имя Христа, Марии, или Св. Доминика.
+\textit{Средний} поклон совершается на последней строфе (доксологии) гимна.
+Поклон \textit{Ad Genua} совершается на "Gloria Patri", до слов "Sicut erat".
+\textit{Конгрегация} верующих должна быть поделена на два примерно равных хора, которые стоят напротив друга и по очереди четким, спокойным, небыстрым голосом читают псалмы. Также должен быть один \textit{Предстоятель} (лат. Hebdomadarius). Если это будет священник или диакон, верзикль "Domine, exaudi" можно заменить на "Dominus vobiscum".
+Предстоятель читает стихи верзиклей (\V, от лат. Versus). Конгрегация (оба хора) отвечают ответы (\R, от лат. Responsum).
+Далее псалмодия совершается следующим образом. Кантор очередного хора читает первый стих до \textit{астериска} (звездочки *), оставшуюся часть стиха заканчивает весь его хор. Следующий стих читает сидящий противоположный хор. На астериске делается небольшая пауза. По окончании псалма конгрегация встает, совершает поклон на "Gloria Patri", ведущий хор садится, следующий хор остается стоять.
+Capitulum (краткое чтение из Книги Сираха) и Коллекта читаются Предстоятелем.
+Антифоны и Гимн читаются всей Конгрегацией.
+После возгласа "Oremus" рекомендуется сделать паузу для молитвы в тишине.
+% В дни Тридуума накладываются ограничения в соответствии с рубриками Бревиария.
+
+% Далее следует Responsorium. Ответ сначала читается Предстоятелем, затем повторяется Конгрегацией. При чтении Оффиция приватно, достаточно прочитать ответ респонсория только один раз.
+
+
+% \begin{center}
+% \textbf{A.M.D.G.}
+% \end{center}
+
+\end{small}
+\end{russian}
+
+\end{sloppy}
+
+\end{document}
